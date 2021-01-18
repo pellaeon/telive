@@ -1,4 +1,4 @@
-from ubuntu
+from ubuntu:18.04
 RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y wget sudo vim nano
 
 ADD files/* /tmp/
