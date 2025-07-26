@@ -40,7 +40,7 @@ cd docker
 
 ## Audio
 
-Enable PulseAudio to receive connections on host:
+Enable PulseAudio to receive connections on host (this also works if you're using Pipewire):
 
 ```
 pactl load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1/16
