@@ -309,7 +309,6 @@ else
 fi
 ( install_libosmocore ) || exit 1
 ( install_osmo_tetra_sq5bpf ) || exit 1 
-( install_telive ) || exit 1
 
 #please note that we should actually check if everything went correctly, 
 #not just assume it :)
