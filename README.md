@@ -29,7 +29,34 @@ Keys:
 - t – toggle between the usage identifier window, and the frequency window
 - z – forget all information learned by telive, read the receiver parameters again
 
-# Docker
+# Docker (under Wayland host, latest)
+
+Build Docker image:
+
+```
+docker build -t telive .
+```
+
+## Start with Audio
+
+You will need [x11docker](https://github.com/mviereck/x11docker). You might also need to `chmod 777` your RTL-SDR usb dev file under `/dev/bus/usb`.
+
+Run:
+
+```
+x11docker --share /dev/bus/usb --user=RETAIN -I --pulseaudio=tcp telive
+```
+
+Note:
+* [x11docker pulseaudio issue](https://github.com/mviereck/x11docker/issues/527)
+
+Debug:
+
+```
+x11docker --share /dev/bus/usb --user=RETAIN -I --pulseaudio=tcp telive qterminal
+```
+
+# Docker (under X11 host, untested, old)
 
 To build and run docker container:
 
