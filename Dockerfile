@@ -19,7 +19,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt install -y tmux qterminal vlc libsox-fmt-
 #RUN /tmp/adduser.sh
 
 RUN echo "%sudo ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/nopwd
-RUN echo 'export PATH="/tetra/bin:/app/bin:$PATH"' >> /etc/environment
 
 WORKDIR /app
 COPY --chown=user1:user1 . /app
